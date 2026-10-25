@@ -1,0 +1,1962 @@
+[
+  {
+    "line": 1,
+    "name": "ping",
+    "justification": "The transport contract requires status=ready."
+  },
+  {
+    "line": 2,
+    "name": "dsu_empty",
+    "justification": "The empty graph has no vertices or edges."
+  },
+  {
+    "line": 3,
+    "name": "dsu_isolates",
+    "justification": "Six independent vertices; no forest edges or condensation edges."
+  },
+  {
+    "line": 4,
+    "name": "kruskal_empty",
+    "justification": "The empty graph has no vertices or edges."
+  },
+  {
+    "line": 5,
+    "name": "kruskal_isolates",
+    "justification": "Six independent vertices; no forest edges or condensation edges."
+  },
+  {
+    "line": 6,
+    "name": "prim_empty",
+    "justification": "The empty graph has no vertices or edges."
+  },
+  {
+    "line": 7,
+    "name": "prim_isolates",
+    "justification": "Six independent vertices; no forest edges or condensation edges."
+  },
+  {
+    "line": 8,
+    "name": "scc_empty",
+    "justification": "The empty graph has no vertices or edges."
+  },
+  {
+    "line": 9,
+    "name": "scc_isolates",
+    "justification": "Six independent vertices; no forest edges or condensation edges."
+  },
+  {
+    "line": 10,
+    "name": "topo_empty",
+    "justification": "The empty graph has no vertices or edges."
+  },
+  {
+    "line": 11,
+    "name": "topo_isolates",
+    "justification": "Six independent vertices; no forest edges or condensation edges."
+  },
+  {
+    "line": 12,
+    "name": "dsu_merge_repeat_self",
+    "justification": "Prefix connected-component search gives (5,2),(4,2),(3,4),(3,4),(3,4),(2,4),(1,6)."
+  },
+  {
+    "line": 13,
+    "name": "kruskal_disconnected_loops_parallel",
+    "justification": "Choose weights -4,-1,7: total 2; vertex 5 is isolated, so 3 components."
+  },
+  {
+    "line": 14,
+    "name": "kruskal_long_-1",
+    "justification": "The unique chain has four edges; its cost is sign * 4,000,000,000."
+  },
+  {
+    "line": 15,
+    "name": "kruskal_long_1",
+    "justification": "The unique chain has four edges; its cost is sign * 4,000,000,000."
+  },
+  {
+    "line": 16,
+    "name": "kruskal_ties",
+    "justification": "Any three edges that form a spanning tree cost 6."
+  },
+  {
+    "line": 17,
+    "name": "prim_disconnected_loops_parallel",
+    "justification": "Choose weights -4,-1,7: total 2; vertex 5 is isolated, so 3 components."
+  },
+  {
+    "line": 18,
+    "name": "prim_long_-1",
+    "justification": "The unique chain has four edges; its cost is sign * 4,000,000,000."
+  },
+  {
+    "line": 19,
+    "name": "prim_long_1",
+    "justification": "The unique chain has four edges; its cost is sign * 4,000,000,000."
+  },
+  {
+    "line": 20,
+    "name": "prim_ties",
+    "justification": "Any three edges that form a spanning tree cost 6."
+  },
+  {
+    "line": 21,
+    "name": "scc_exact_condensation",
+    "justification": "SCCs are {0,1},{2,3},{4},{5,6}; only the first-to-second and second-to-third pairs exist."
+  },
+  {
+    "line": 22,
+    "name": "topo_finished_cross_edge",
+    "justification": "Independent Kahn removal detects exactly whether all five vertices can be removed."
+  },
+  {
+    "line": 23,
+    "name": "topo_self_loop",
+    "justification": "Independent Kahn removal detects exactly whether all five vertices can be removed."
+  },
+  {
+    "line": 24,
+    "name": "topo_disconnected_cycle",
+    "justification": "Independent Kahn removal detects exactly whether all five vertices can be removed."
+  },
+  {
+    "line": 25,
+    "name": "dag_singleton",
+    "justification": "Kahn checks the whole graph; independent repeated Bellman-Ford relaxation computes finite distances."
+  },
+  {
+    "line": 26,
+    "name": "dag_negative_unreachable",
+    "justification": "Kahn checks the whole graph; independent repeated Bellman-Ford relaxation computes finite distances."
+  },
+  {
+    "line": 27,
+    "name": "dag_unreachable_cycle",
+    "justification": "Kahn checks the whole graph; independent repeated Bellman-Ford relaxation computes finite distances."
+  },
+  {
+    "line": 28,
+    "name": "dag_self_loop",
+    "justification": "Kahn checks the whole graph; independent repeated Bellman-Ford relaxation computes finite distances."
+  },
+  {
+    "line": 29,
+    "name": "dag_ties_parallel",
+    "justification": "Kahn checks the whole graph; independent repeated Bellman-Ford relaxation computes finite distances."
+  },
+  {
+    "line": 30,
+    "name": "dag_nonzero_source",
+    "justification": "Kahn checks the whole graph; independent repeated Bellman-Ford relaxation computes finite distances."
+  },
+  {
+    "line": 31,
+    "name": "dag_long_positive",
+    "justification": "Kahn checks the whole graph; independent repeated Bellman-Ford relaxation computes finite distances."
+  },
+  {
+    "line": 32,
+    "name": "dag_long_negative",
+    "justification": "Kahn checks the whole graph; independent repeated Bellman-Ford relaxation computes finite distances."
+  },
+  {
+    "line": 33,
+    "name": "random_0_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 34,
+    "name": "random_0_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 35,
+    "name": "random_0_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 36,
+    "name": "random_0_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 37,
+    "name": "random_0_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 38,
+    "name": "random_0_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 39,
+    "name": "random_1_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 40,
+    "name": "random_1_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 41,
+    "name": "random_1_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 42,
+    "name": "random_1_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 43,
+    "name": "random_1_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 44,
+    "name": "random_1_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 45,
+    "name": "random_2_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 46,
+    "name": "random_2_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 47,
+    "name": "random_2_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 48,
+    "name": "random_2_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 49,
+    "name": "random_2_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 50,
+    "name": "random_2_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 51,
+    "name": "random_3_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 52,
+    "name": "random_3_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 53,
+    "name": "random_3_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 54,
+    "name": "random_3_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 55,
+    "name": "random_3_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 56,
+    "name": "random_3_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 57,
+    "name": "random_4_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 58,
+    "name": "random_4_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 59,
+    "name": "random_4_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 60,
+    "name": "random_4_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 61,
+    "name": "random_4_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 62,
+    "name": "random_4_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 63,
+    "name": "random_5_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 64,
+    "name": "random_5_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 65,
+    "name": "random_5_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 66,
+    "name": "random_5_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 67,
+    "name": "random_5_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 68,
+    "name": "random_5_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 69,
+    "name": "random_6_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 70,
+    "name": "random_6_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 71,
+    "name": "random_6_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 72,
+    "name": "random_6_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 73,
+    "name": "random_6_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 74,
+    "name": "random_6_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 75,
+    "name": "random_7_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 76,
+    "name": "random_7_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 77,
+    "name": "random_7_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 78,
+    "name": "random_7_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 79,
+    "name": "random_7_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 80,
+    "name": "random_7_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 81,
+    "name": "random_8_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 82,
+    "name": "random_8_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 83,
+    "name": "random_8_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 84,
+    "name": "random_8_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 85,
+    "name": "random_8_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 86,
+    "name": "random_8_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 87,
+    "name": "random_9_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 88,
+    "name": "random_9_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 89,
+    "name": "random_9_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 90,
+    "name": "random_9_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 91,
+    "name": "random_9_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 92,
+    "name": "random_9_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 93,
+    "name": "random_10_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 94,
+    "name": "random_10_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 95,
+    "name": "random_10_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 96,
+    "name": "random_10_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 97,
+    "name": "random_10_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 98,
+    "name": "random_10_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 99,
+    "name": "random_11_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 100,
+    "name": "random_11_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 101,
+    "name": "random_11_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 102,
+    "name": "random_11_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 103,
+    "name": "random_11_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 104,
+    "name": "random_11_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 105,
+    "name": "random_12_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 106,
+    "name": "random_12_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 107,
+    "name": "random_12_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 108,
+    "name": "random_12_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 109,
+    "name": "random_12_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 110,
+    "name": "random_12_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 111,
+    "name": "random_13_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 112,
+    "name": "random_13_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 113,
+    "name": "random_13_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 114,
+    "name": "random_13_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 115,
+    "name": "random_13_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 116,
+    "name": "random_13_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 117,
+    "name": "random_14_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 118,
+    "name": "random_14_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 119,
+    "name": "random_14_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 120,
+    "name": "random_14_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 121,
+    "name": "random_14_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 122,
+    "name": "random_14_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 123,
+    "name": "random_15_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 124,
+    "name": "random_15_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 125,
+    "name": "random_15_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 126,
+    "name": "random_15_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 127,
+    "name": "random_15_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 128,
+    "name": "random_15_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 129,
+    "name": "random_16_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 130,
+    "name": "random_16_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 131,
+    "name": "random_16_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 132,
+    "name": "random_16_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 133,
+    "name": "random_16_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 134,
+    "name": "random_16_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 135,
+    "name": "random_17_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 136,
+    "name": "random_17_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 137,
+    "name": "random_17_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 138,
+    "name": "random_17_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 139,
+    "name": "random_17_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 140,
+    "name": "random_17_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 141,
+    "name": "random_18_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 142,
+    "name": "random_18_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 143,
+    "name": "random_18_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 144,
+    "name": "random_18_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 145,
+    "name": "random_18_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 146,
+    "name": "random_18_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 147,
+    "name": "random_19_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 148,
+    "name": "random_19_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 149,
+    "name": "random_19_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 150,
+    "name": "random_19_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 151,
+    "name": "random_19_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 152,
+    "name": "random_19_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 153,
+    "name": "random_20_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 154,
+    "name": "random_20_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 155,
+    "name": "random_20_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 156,
+    "name": "random_20_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 157,
+    "name": "random_20_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 158,
+    "name": "random_20_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 159,
+    "name": "random_21_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 160,
+    "name": "random_21_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 161,
+    "name": "random_21_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 162,
+    "name": "random_21_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 163,
+    "name": "random_21_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 164,
+    "name": "random_21_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 165,
+    "name": "random_22_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 166,
+    "name": "random_22_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 167,
+    "name": "random_22_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 168,
+    "name": "random_22_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 169,
+    "name": "random_22_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 170,
+    "name": "random_22_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 171,
+    "name": "random_23_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 172,
+    "name": "random_23_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 173,
+    "name": "random_23_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 174,
+    "name": "random_23_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 175,
+    "name": "random_23_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 176,
+    "name": "random_23_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 177,
+    "name": "random_24_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 178,
+    "name": "random_24_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 179,
+    "name": "random_24_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 180,
+    "name": "random_24_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 181,
+    "name": "random_24_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 182,
+    "name": "random_24_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 183,
+    "name": "random_25_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 184,
+    "name": "random_25_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 185,
+    "name": "random_25_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 186,
+    "name": "random_25_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 187,
+    "name": "random_25_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 188,
+    "name": "random_25_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 189,
+    "name": "random_26_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 190,
+    "name": "random_26_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 191,
+    "name": "random_26_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 192,
+    "name": "random_26_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 193,
+    "name": "random_26_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 194,
+    "name": "random_26_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 195,
+    "name": "random_27_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 196,
+    "name": "random_27_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 197,
+    "name": "random_27_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 198,
+    "name": "random_27_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 199,
+    "name": "random_27_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 200,
+    "name": "random_27_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 201,
+    "name": "random_28_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 202,
+    "name": "random_28_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 203,
+    "name": "random_28_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 204,
+    "name": "random_28_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 205,
+    "name": "random_28_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 206,
+    "name": "random_28_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 207,
+    "name": "random_29_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 208,
+    "name": "random_29_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 209,
+    "name": "random_29_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 210,
+    "name": "random_29_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 211,
+    "name": "random_29_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 212,
+    "name": "random_29_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 213,
+    "name": "random_30_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 214,
+    "name": "random_30_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 215,
+    "name": "random_30_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 216,
+    "name": "random_30_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 217,
+    "name": "random_30_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 218,
+    "name": "random_30_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 219,
+    "name": "random_31_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 220,
+    "name": "random_31_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 221,
+    "name": "random_31_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 222,
+    "name": "random_31_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 223,
+    "name": "random_31_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 224,
+    "name": "random_31_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 225,
+    "name": "random_32_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 226,
+    "name": "random_32_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 227,
+    "name": "random_32_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 228,
+    "name": "random_32_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 229,
+    "name": "random_32_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 230,
+    "name": "random_32_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 231,
+    "name": "random_33_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 232,
+    "name": "random_33_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 233,
+    "name": "random_33_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 234,
+    "name": "random_33_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 235,
+    "name": "random_33_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 236,
+    "name": "random_33_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 237,
+    "name": "random_34_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 238,
+    "name": "random_34_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 239,
+    "name": "random_34_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 240,
+    "name": "random_34_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 241,
+    "name": "random_34_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 242,
+    "name": "random_34_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 243,
+    "name": "random_35_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 244,
+    "name": "random_35_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 245,
+    "name": "random_35_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 246,
+    "name": "random_35_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 247,
+    "name": "random_35_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 248,
+    "name": "random_35_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 249,
+    "name": "random_36_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 250,
+    "name": "random_36_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 251,
+    "name": "random_36_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 252,
+    "name": "random_36_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 253,
+    "name": "random_36_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 254,
+    "name": "random_36_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 255,
+    "name": "random_37_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 256,
+    "name": "random_37_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 257,
+    "name": "random_37_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 258,
+    "name": "random_37_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 259,
+    "name": "random_37_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 260,
+    "name": "random_37_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 261,
+    "name": "random_38_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 262,
+    "name": "random_38_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 263,
+    "name": "random_38_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 264,
+    "name": "random_38_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 265,
+    "name": "random_38_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 266,
+    "name": "random_38_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 267,
+    "name": "random_39_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 268,
+    "name": "random_39_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 269,
+    "name": "random_39_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 270,
+    "name": "random_39_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 271,
+    "name": "random_39_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 272,
+    "name": "random_39_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 273,
+    "name": "random_40_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 274,
+    "name": "random_40_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 275,
+    "name": "random_40_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 276,
+    "name": "random_40_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 277,
+    "name": "random_40_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 278,
+    "name": "random_40_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 279,
+    "name": "random_41_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 280,
+    "name": "random_41_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 281,
+    "name": "random_41_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 282,
+    "name": "random_41_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 283,
+    "name": "random_41_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 284,
+    "name": "random_41_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 285,
+    "name": "random_42_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 286,
+    "name": "random_42_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 287,
+    "name": "random_42_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 288,
+    "name": "random_42_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 289,
+    "name": "random_42_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 290,
+    "name": "random_42_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 291,
+    "name": "random_43_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 292,
+    "name": "random_43_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 293,
+    "name": "random_43_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 294,
+    "name": "random_43_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 295,
+    "name": "random_43_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 296,
+    "name": "random_43_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 297,
+    "name": "random_44_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 298,
+    "name": "random_44_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 299,
+    "name": "random_44_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 300,
+    "name": "random_44_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 301,
+    "name": "random_44_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 302,
+    "name": "random_44_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 303,
+    "name": "random_45_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 304,
+    "name": "random_45_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 305,
+    "name": "random_45_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 306,
+    "name": "random_45_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 307,
+    "name": "random_45_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 308,
+    "name": "random_45_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 309,
+    "name": "random_46_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 310,
+    "name": "random_46_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 311,
+    "name": "random_46_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 312,
+    "name": "random_46_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 313,
+    "name": "random_46_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 314,
+    "name": "random_46_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 315,
+    "name": "random_47_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 316,
+    "name": "random_47_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 317,
+    "name": "random_47_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 318,
+    "name": "random_47_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 319,
+    "name": "random_47_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 320,
+    "name": "random_47_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 321,
+    "name": "random_48_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 322,
+    "name": "random_48_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 323,
+    "name": "random_48_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 324,
+    "name": "random_48_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 325,
+    "name": "random_48_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 326,
+    "name": "random_48_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 327,
+    "name": "random_49_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 328,
+    "name": "random_49_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 329,
+    "name": "random_49_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 330,
+    "name": "random_49_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 331,
+    "name": "random_49_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 332,
+    "name": "random_49_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 333,
+    "name": "random_50_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 334,
+    "name": "random_50_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 335,
+    "name": "random_50_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 336,
+    "name": "random_50_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 337,
+    "name": "random_50_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 338,
+    "name": "random_50_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 339,
+    "name": "random_51_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 340,
+    "name": "random_51_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 341,
+    "name": "random_51_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 342,
+    "name": "random_51_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 343,
+    "name": "random_51_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 344,
+    "name": "random_51_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 345,
+    "name": "random_52_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 346,
+    "name": "random_52_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 347,
+    "name": "random_52_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 348,
+    "name": "random_52_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 349,
+    "name": "random_52_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 350,
+    "name": "random_52_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 351,
+    "name": "random_53_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 352,
+    "name": "random_53_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 353,
+    "name": "random_53_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 354,
+    "name": "random_53_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 355,
+    "name": "random_53_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 356,
+    "name": "random_53_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 357,
+    "name": "random_54_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 358,
+    "name": "random_54_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 359,
+    "name": "random_54_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 360,
+    "name": "random_54_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 361,
+    "name": "random_54_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 362,
+    "name": "random_54_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 363,
+    "name": "random_55_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 364,
+    "name": "random_55_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 365,
+    "name": "random_55_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 366,
+    "name": "random_55_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 367,
+    "name": "random_55_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 368,
+    "name": "random_55_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 369,
+    "name": "random_56_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 370,
+    "name": "random_56_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 371,
+    "name": "random_56_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 372,
+    "name": "random_56_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 373,
+    "name": "random_56_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 374,
+    "name": "random_56_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 375,
+    "name": "random_57_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 376,
+    "name": "random_57_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 377,
+    "name": "random_57_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 378,
+    "name": "random_57_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 379,
+    "name": "random_57_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 380,
+    "name": "random_57_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 381,
+    "name": "random_58_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 382,
+    "name": "random_58_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 383,
+    "name": "random_58_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 384,
+    "name": "random_58_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 385,
+    "name": "random_58_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 386,
+    "name": "random_58_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  },
+  {
+    "line": 387,
+    "name": "random_59_dsu",
+    "justification": "Expected states come from graph search on every operation prefix, without DSU."
+  },
+  {
+    "line": 388,
+    "name": "random_59_kruskal",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 389,
+    "name": "random_59_prim",
+    "justification": "All subsets of size n-components are enumerated; the cheapest spanning subset is optimal."
+  },
+  {
+    "line": 390,
+    "name": "random_59_scc",
+    "justification": "Floyd-Warshall Boolean transitive closure defines mutual reachability."
+  },
+  {
+    "line": 391,
+    "name": "random_59_topo",
+    "justification": "Kahn's indegree removal is independent of the submitted DFS."
+  },
+  {
+    "line": 392,
+    "name": "random_59_dag",
+    "justification": "Kahn's whole-graph cycle result plus Bellman-Ford distances; parents checked semantically."
+  }
+]

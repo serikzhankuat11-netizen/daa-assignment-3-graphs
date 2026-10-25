@@ -1,5 +1,35 @@
 # Assignment 3: Graph Algorithms for a Campus Festival
 
+## Java 17 solution - Serik Zhankuat, SE-2520
+
+The six algorithms and the route helper are implemented in
+`src/Java/Algorithms.java`. The selected language is Java.
+
+- [Analysis, correctness proofs, complexities and measured benchmark](ANALYSIS.md)
+- [Student tests and evidence](tests/README.md)
+- [Kazakh setup and submission guide](START_HERE_KZ.md)
+- [Short defence preparation notes](DEFENCE_KZ.md)
+
+Recorded local verification: **36/36 Public cases**, the public state-reset
+check, **392 own cases replayed as 784 mixed requests**, **17 scale cases**,
+**9 route-helper cases**, and semantic alternative/invalid witness checks passed.
+The benchmark contains seven measurements per method at each of three sizes.
+Raw inputs and results are included under `tests/results/`.
+GitHub Actions status must be checked after uploading the commit.
+
+```sh
+python tools/run.py --setup
+python tools/run.py --check
+python tests/run_tests.py
+python tests/benchmark.py
+```
+
+Requires JDK 17+ and Python 3.12+. On Windows, `py -3` can replace `python`.
+See the assistance disclosure in ANALYSIS.md. The original assignment
+specification follows unchanged.
+
+---
+
 [Assignment (PDF, English)](docs/Assignment_3_EN.pdf) · [Задание (PDF, русский)](docs/Assignment_3_RU.pdf)
 
 [Русская версия](README_RU.md)

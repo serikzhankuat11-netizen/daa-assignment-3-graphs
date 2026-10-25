@@ -1,0 +1,138 @@
+[
+  {
+    "name": "dsu_full_limits",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.675554,
+    "justification": "The first n-1 unions extend one chain; the remaining unions change nothing.",
+    "status": "PASS"
+  },
+  {
+    "name": "kruskal_full_1",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.542081,
+    "justification": "The only non-loop edges form a chain, so all n-1 chain edges are required.",
+    "status": "PASS"
+  },
+  {
+    "name": "prim_full_1",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.57612,
+    "justification": "The only non-loop edges form a chain, so all n-1 chain edges are required.",
+    "status": "PASS"
+  },
+  {
+    "name": "kruskal_full_-1",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.487244,
+    "justification": "The only non-loop edges form a chain, so all n-1 chain edges are required.",
+    "status": "PASS"
+  },
+  {
+    "name": "prim_full_-1",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.53754,
+    "justification": "The only non-loop edges form a chain, so all n-1 chain edges are required.",
+    "status": "PASS"
+  },
+  {
+    "name": "scc_deep_full",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.695011,
+    "justification": "A one-way chain has n singleton SCCs and exactly n-1 distinct condensation pairs.",
+    "status": "PASS"
+  },
+  {
+    "name": "topo_deep_full",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.509997,
+    "justification": "Every edge increases the vertex number; duplicates do not change precedence.",
+    "status": "PASS"
+  },
+  {
+    "name": "dag_deep_full_1",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.611796,
+    "justification": "All source-to-v routes have v equal-weight steps, hence distance=v*weight.",
+    "status": "PASS"
+  },
+  {
+    "name": "dag_deep_full_-1",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.591723,
+    "justification": "All source-to-v routes have v equal-weight steps, hence distance=v*weight.",
+    "status": "PASS"
+  },
+  {
+    "name": "scc_giant_full",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.486385,
+    "justification": "The closing arc makes every vertex mutually reachable.",
+    "status": "PASS"
+  },
+  {
+    "name": "topo_cycle_full",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.415964,
+    "justification": "The n-vertex directed ring is a cycle.",
+    "status": "PASS"
+  },
+  {
+    "name": "topo_high_degree_full",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.449487,
+    "justification": "Only vertex 0 has outgoing arcs; it must precede all other vertices.",
+    "status": "PASS"
+  },
+  {
+    "name": "dag_unreachable_cycle_full",
+    "n": 100000,
+    "m_or_q": 250000,
+    "seconds": 0.43174,
+    "justification": "Source 0 is isolated; vertices 1..n-1 form an unreachable directed cycle.",
+    "status": "PASS"
+  },
+  {
+    "name": "kruskal_maximum_isolates",
+    "n": 100000,
+    "m_or_q": 0,
+    "seconds": 0.073997,
+    "justification": "All 100000 vertices are isolated; each is its own component.",
+    "status": "PASS"
+  },
+  {
+    "name": "prim_maximum_isolates",
+    "n": 100000,
+    "m_or_q": 0,
+    "seconds": 0.083589,
+    "justification": "All 100000 vertices are isolated; each is its own component.",
+    "status": "PASS"
+  },
+  {
+    "name": "scc_maximum_isolates",
+    "n": 100000,
+    "m_or_q": 0,
+    "seconds": 0.135733,
+    "justification": "All 100000 vertices are isolated; each is its own component.",
+    "status": "PASS"
+  },
+  {
+    "name": "topo_maximum_isolates",
+    "n": 100000,
+    "m_or_q": 0,
+    "seconds": 0.143732,
+    "justification": "All 100000 vertices are isolated; each is its own component.",
+    "status": "PASS"
+  }
+]

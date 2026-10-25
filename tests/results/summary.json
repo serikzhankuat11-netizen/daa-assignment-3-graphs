@@ -1,0 +1,11 @@
+{
+  "seed": 252904,
+  "fixed_cases": 32,
+  "random_cases": 360,
+  "mixed_requests_one_jvm": 784,
+  "route_cases": 9,
+  "alternative_witnesses_accepted": 5,
+  "invalid_witnesses_rejected": 5,
+  "scale_cases": 17,
+  "status": "PASS"
+}

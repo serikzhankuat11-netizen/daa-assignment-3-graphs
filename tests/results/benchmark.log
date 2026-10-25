@@ -1,0 +1,7 @@
+PASS certified both forests: n=1000, m=4000
+PASS certified both forests: n=10000, m=40000
+PASS certified both forests: n=50000, m=200000
+{"n": 1000, "m": 4000, "kruskal_median_ms": 2.237186, "prim_median_ms": 2.22878}
+{"n": 10000, "m": 40000, "kruskal_median_ms": 13.292992, "prim_median_ms": 15.171646}
+{"n": 50000, "m": 200000, "kruskal_median_ms": 154.243484, "prim_median_ms": 158.769357}
+PASS benchmark complete

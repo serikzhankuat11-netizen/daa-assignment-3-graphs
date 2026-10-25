@@ -1,0 +1,169 @@
+{
+  "recorded_at_utc": "2026-10-25T14:22:25.417347+00:00",
+  "command": "python tests/benchmark.py",
+  "base_seed": 252904,
+  "generator": "Python random.Random(base_seed+n); weighted chain, random extra edges, shuffle",
+  "python": "3.12.14",
+  "os": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "cpu": "AMD EPYC 7763 64-Core Processor",
+  "logical_cpus": 9,
+  "timer": "System.nanoTime, elapsed nanoseconds",
+  "jvm_flags": [
+    "-Xms128m",
+    "-Xmx384m"
+  ],
+  "warmup": "8 calls per method per size; alternate first method",
+  "samples": "7 calls per method per size; alternate first method",
+  "included": "Method-local allocation, edge-ID sorting/adjacency creation, algorithm and result object",
+  "excluded": "Compilation, JVM startup, input generation, JSON parsing, typed input conversion, validation, serialization and I/O",
+  "preflight": "Both forests independently certified by feasibility and path-maximum cycle optimality",
+  "graphs": [
+    {
+      "n": 1000,
+      "m": 4000,
+      "cost": -701431711939,
+      "kruskal_ns": [
+        2483787,
+        2197622,
+        2357861,
+        2237186,
+        2296327,
+        2156354,
+        1967461
+      ],
+      "prim_ns": [
+        2294714,
+        2257544,
+        2228780,
+        2187613,
+        2368461,
+        1972189,
+        1787013
+      ],
+      "java_version": "17.0.20",
+      "java_vm": "OpenJDK 64-Bit Server VM",
+      "max_heap_bytes": 402653184,
+      "available_processors": 8,
+      "seed": 253904,
+      "sha256_edges": "71000f225f5860642bd4e89a2ac7dbbe86061135de29e3162a16fa03091b2b79",
+      "kruskal_ms": [
+        2.483787,
+        2.197622,
+        2.357861,
+        2.237186,
+        2.296327,
+        2.156354,
+        1.967461
+      ],
+      "kruskal_median_ms": 2.237186,
+      "prim_ms": [
+        2.294714,
+        2.257544,
+        2.22878,
+        2.187613,
+        2.368461,
+        1.972189,
+        1.787013
+      ],
+      "prim_median_ms": 2.22878
+    },
+    {
+      "n": 10000,
+      "m": 40000,
+      "cost": -7070455311048,
+      "kruskal_ns": [
+        13272703,
+        13186802,
+        13660278,
+        13426421,
+        13208544,
+        13292992,
+        13328888
+      ],
+      "prim_ns": [
+        15171646,
+        16500773,
+        14056801,
+        16103831,
+        15189820,
+        14968475,
+        14807865
+      ],
+      "java_version": "17.0.20",
+      "java_vm": "OpenJDK 64-Bit Server VM",
+      "max_heap_bytes": 402653184,
+      "available_processors": 8,
+      "seed": 262904,
+      "sha256_edges": "c573294d6e3926846dd19b901f50af5638cd07e2a336d17ead0eadc462e489fc",
+      "kruskal_ms": [
+        13.272703,
+        13.186802,
+        13.660278,
+        13.426421,
+        13.208544,
+        13.292992,
+        13.328888
+      ],
+      "kruskal_median_ms": 13.292992,
+      "prim_ms": [
+        15.171646,
+        16.500773,
+        14.056801,
+        16.103831,
+        15.18982,
+        14.968475,
+        14.807865
+      ],
+      "prim_median_ms": 15.171646
+    },
+    {
+      "n": 50000,
+      "m": 200000,
+      "cost": -35287385527911,
+      "kruskal_ns": [
+        154243484,
+        134626345,
+        155940878,
+        133628417,
+        126793837,
+        163338341,
+        178105919
+      ],
+      "prim_ns": [
+        145237009,
+        140025449,
+        183279077,
+        192749987,
+        158918179,
+        147489194,
+        158769357
+      ],
+      "java_version": "17.0.20",
+      "java_vm": "OpenJDK 64-Bit Server VM",
+      "max_heap_bytes": 402653184,
+      "available_processors": 8,
+      "seed": 302904,
+      "sha256_edges": "109c73915ec863f58adfb9051f557686bfc6a6f7fd361f3b3b3ef3b35866648e",
+      "kruskal_ms": [
+        154.243484,
+        134.626345,
+        155.940878,
+        133.628417,
+        126.793837,
+        163.338341,
+        178.105919
+      ],
+      "kruskal_median_ms": 154.243484,
+      "prim_ms": [
+        145.237009,
+        140.025449,
+        183.279077,
+        192.749987,
+        158.918179,
+        147.489194,
+        158.769357
+      ],
+      "prim_median_ms": 158.769357
+    }
+  ]
+}

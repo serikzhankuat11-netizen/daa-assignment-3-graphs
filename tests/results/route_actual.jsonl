@@ -1,0 +1,9 @@
+{"selected_edge_ids":[0,2,3],"status":"PASS","case":"reachable","source":0,"target":3,"weight":0,"route":[0,1,2,3]}
+{"selected_edge_ids":[],"status":"PASS","case":"source","source":0,"target":0,"weight":0,"route":[0]}
+{"selected_edge_ids":[],"status":"PASS","case":"unreachable","source":0,"target":4,"weight":"no route","route":[]}
+{"selected_edge_ids":[2,4],"status":"PASS","case":"tied_parallel","source":0,"target":3,"weight":1,"route":[0,2,3]}
+{"selected_edge_ids":[0],"status":"PASS","case":"parallel_edge","source":0,"target":1,"weight":2,"route":[0,1]}
+{"selected_edge_ids":[0,1],"status":"PASS","case":"nonzero_source","source":2,"target":0,"weight":4,"route":[2,1,0]}
+{"case":"wrong_direction_rejected","status":"PASS"}
+{"case":"parent_cycle_rejected","status":"PASS"}
+{"status":"PASS","vertices":100000,"case":"deep_route","first":0,"last":99999}

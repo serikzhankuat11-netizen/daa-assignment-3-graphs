@@ -1,0 +1,21 @@
+PASS 32 fixed + 360 random cases; 784 mixed requests in one JVM
+PASS 5 alternative witnesses accepted and 5 invalid witnesses rejected
+PASS 9 direct route helper cases
+PASS dsu_full_limits: n=100000, m/q=250000, 0.676 s
+PASS kruskal_full_1: n=100000, m/q=250000, 0.542 s
+PASS prim_full_1: n=100000, m/q=250000, 0.576 s
+PASS kruskal_full_-1: n=100000, m/q=250000, 0.487 s
+PASS prim_full_-1: n=100000, m/q=250000, 0.538 s
+PASS scc_deep_full: n=100000, m/q=250000, 0.695 s
+PASS topo_deep_full: n=100000, m/q=250000, 0.510 s
+PASS dag_deep_full_1: n=100000, m/q=250000, 0.612 s
+PASS dag_deep_full_-1: n=100000, m/q=250000, 0.592 s
+PASS scc_giant_full: n=100000, m/q=250000, 0.486 s
+PASS topo_cycle_full: n=100000, m/q=250000, 0.416 s
+PASS topo_high_degree_full: n=100000, m/q=250000, 0.449 s
+PASS dag_unreachable_cycle_full: n=100000, m/q=250000, 0.432 s
+PASS kruskal_maximum_isolates: n=100000, m/q=0, 0.074 s
+PASS prim_maximum_isolates: n=100000, m/q=0, 0.084 s
+PASS scc_maximum_isolates: n=100000, m/q=0, 0.136 s
+PASS topo_maximum_isolates: n=100000, m/q=0, 0.144 s
+PASS all student tests
